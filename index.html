@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Token Dragon (TDRN)</title>
-<meta name="description" content="Token Dragon (TDRN) is ERC-20 token on Ethereum with fixed supply of 1,000,000. The contract has no owner and no mint function.">
+<meta name="description" content="Token Dragon (TDRN) is ERC-20 token on Ethereum with fixed supply of 1,000,000, planned as in-game currency of Dragon Worlds, fantasy MMORPG in development.">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/logo-256.png">
 <meta property="og:title" content="Token Dragon (TDRN)">
@@ -89,6 +89,8 @@ h1 {
 
 .eye { width: 100%; height: auto; aspect-ratio: 1; display: block; }
 
+.use { border-top: 1.5px solid var(--line); padding: 56px 0 56px; }
+.use p { margin: 0; max-width: 34em; font-size: 20px; }
 .facts { border-top: 1.5px solid var(--line); padding: 56px 0 24px; }
 h2 { margin: 0 0 28px; font-size: 32px; font-weight: 700; letter-spacing: -0.015em; }
 dl { margin: 0; display: grid; grid-template-columns: 240px minmax(0, 1fr); }
@@ -134,7 +136,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
     <div>
       <p class="mark"><img src="/logo.svg" alt="" width="32" height="32">tokendragon.org</p>
       <h1>Token Dragon<span class="ticker">TDRN on Ethereum</span></h1>
-      <p class="lede">TDRN is ERC-20 token with fixed supply of 1,000,000. All tokens were minted once, at deployment. The contract has no owner and no mint function, so supply can never grow.</p>
+      <p class="lede">TDRN will be in-game currency of Dragon Worlds, fantasy MMORPG now in development. Fixed supply of 1,000,000 tokens, all minted once at deployment. The contract has no owner and no mint function, so supply can never grow.</p>
       <div class="actions">
         <button class="btn btn-primary" id="add">Add TDRN to wallet</button>
         <a class="btn btn-quiet" href="https://etherscan.io/token/0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b" rel="noopener">View on Etherscan</a>
@@ -144,6 +146,11 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
     <div class="eye-box">
       <img class="eye" src="/logo.svg" alt="Token Dragon logo: black line-art dragon head on yellow coin" width="440" height="440">
     </div>
+  </section>
+
+  <section class="use" aria-labelledby="use-title">
+    <h2 id="use-title">What TDRN is for</h2>
+    <p>Dragon Worlds is fantasy MMORPG in development. TDRN is planned as its in-game currency: players will spend it on character upgrades and in-game items.</p>
   </section>
 
   <section class="facts" aria-labelledby="facts-title">
