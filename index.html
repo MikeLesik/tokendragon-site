@@ -12,6 +12,7 @@
 <meta property="og:image" content="https://tokendragon.org/logo-256.png">
 <meta property="og:url" content="https://tokendragon.org/">
 <meta name="theme-color" content="#10302b">
+<link rel="icon" href="/logo-64.png" type="image/png" sizes="64x64">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -86,8 +87,7 @@ h1 {
 .btn-quiet:hover { color: var(--bone); box-shadow: inset 0 0 0 1.5px var(--bone-dim); }
 .status { min-height: 1.6em; margin: 14px 0 0; font-size: 16px; color: var(--bone-dim); }
 
-.eye { width: 100%; aspect-ratio: 1; display: block; }
-.eye .pupil { transition: transform 120ms linear; }
+.eye { width: 100%; height: auto; aspect-ratio: 1; display: block; }
 
 .facts { border-top: 1.5px solid var(--line); padding: 56px 0 24px; }
 h2 { margin: 0 0 28px; font-size: 32px; font-weight: 700; letter-spacing: -0.015em; }
@@ -126,9 +126,6 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   .wrap { padding: 0 16px; }
   .btn { width: 100%; text-align: center; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .eye .pupil { transition: none; }
-}
 </style>
 </head>
 <body>
@@ -145,24 +142,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <p class="status" id="status" role="status" aria-live="polite"></p>
     </div>
     <div class="eye-box">
-      <svg class="eye" viewBox="0 0 32 32" role="img" aria-label="Token Dragon logo, dragon eye">
-        <defs>
-          <radialGradient id="iris" cx="16" cy="16" r="12" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#ffd36b"/>
-            <stop offset="0.55" stop-color="#f29a2e"/>
-            <stop offset="1" stop-color="#b8361a"/>
-          </radialGradient>
-          <clipPath id="lid"><path d="M2.5 16C8.5 6.8 23.5 6.8 29.5 16C23.5 25.2 8.5 25.2 2.5 16Z"/></clipPath>
-        </defs>
-        <rect width="32" height="32" rx="8" fill="#0b231f"/>
-        <path d="M2.5 16C8.5 6.8 23.5 6.8 29.5 16C23.5 25.2 8.5 25.2 2.5 16Z" fill="url(#iris)"/>
-        <g clip-path="url(#lid)">
-          <g class="pupil" id="pupil">
-            <path d="M16 7.6C18.9 11.4 18.9 20.6 16 24.4C13.1 20.6 13.1 11.4 16 7.6Z" fill="#0b231f"/>
-            <ellipse cx="20.2" cy="12.6" rx="1.5" ry="1.1" fill="#fff3d6" opacity="0.9"/>
-          </g>
-        </g>
-      </svg>
+      <img class="eye" src="/logo.svg" alt="Token Dragon logo: black line-art dragon head on yellow coin" width="440" height="440">
     </div>
   </section>
 
@@ -185,6 +165,8 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <dd>None</dd>
       <dt>Source code</dt>
       <dd>Verified on <a href="https://etherscan.io/address/0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b#code" rel="noopener">Etherscan</a> and <a href="https://sourcify.dev/#/lookup/0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b" rel="noopener">Sourcify</a></dd>
+      <dt>Official pool</dt>
+      <dd>Uniswap v3, TDRN / USDC, 1% fee: <a href="https://app.uniswap.org/explore/pools/ethereum/0x6819072240F29c586019db8F70411Ba8c03146C8" rel="noopener">Uniswap</a>, <a href="https://www.geckoterminal.com/eth/pools/0x6819072240F29c586019db8F70411Ba8c03146C8" rel="noopener">GeckoTerminal</a><br><code>0x6819072240F29c586019db8F70411Ba8c03146C8</code></dd>
       <dt>Deployed</dt>
       <dd>5 November 2026, <a href="https://etherscan.io/tx/0xde74558076fe67b45879416086c59e2bfa464da583f596de0e649a6c64757b58" rel="noopener">transaction</a></dd>
     </dl>
@@ -234,22 +216,6 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
     }
   });
 
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var eye = document.querySelector(".eye");
-  var pupil = document.getElementById("pupil");
-  var raf = 0;
-  window.addEventListener("pointermove", function (ev) {
-    if (raf) return;
-    raf = requestAnimationFrame(function () {
-      raf = 0;
-      var r = eye.getBoundingClientRect();
-      var dx = ev.clientX - (r.left + r.width / 2);
-      var dy = ev.clientY - (r.top + r.height / 2);
-      var d = Math.hypot(dx, dy) || 1;
-      var k = Math.min(1, d / 400);
-      pupil.style.transform = "translate(" + (dx / d * 5 * k).toFixed(2) + "px," + (dy / d * 2 * k).toFixed(2) + "px)";
-    });
-  }, { passive: true });
 })();
 </script>
 </body>
