@@ -219,7 +219,8 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       });
       status.textContent = added ? "TDRN added to your wallet." : "Adding TDRN was cancelled in the wallet.";
     } catch (e) {
-      status.textContent = "Wallet did not add TDRN: " + (e && e.message ? e.message : "unknown error") + ". You can import the contract address manually.";
+      var reason = e && e.message ? String(e.message).replace(/[\s.]+$/, "") : "unknown error";
+      status.textContent = "Wallet did not add TDRN: " + reason + ". You can import the contract address manually.";
     }
   });
 
