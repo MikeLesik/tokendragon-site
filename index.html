@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Token Dragon (TDRN)</title>
-<meta name="description" content="Token Dragon (TDRN) is ERC-20 token on Ethereum with fixed supply of 1,000,000, planned as in-game currency of Dragon Worlds, fantasy MMORPG in development.">
+<meta name="description" content="Token Dragon (TDRN) is ERC-20 token on Ethereum and SPL token on Solana, each with fixed supply of 1,000,000, planned as in-game currency of Dragon Worlds, fantasy MMORPG in development.">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/logo-256.png">
 <meta property="og:title" content="Token Dragon (TDRN)">
-<meta property="og:description" content="ERC-20 token on Ethereum with fixed supply of 1,000,000.">
+<meta property="og:description" content="ERC-20 token on Ethereum and SPL token on Solana, each with fixed supply of 1,000,000.">
 <meta property="og:image" content="https://tokendragon.org/logo-256.png">
 <meta property="og:url" content="https://tokendragon.org/">
 <meta name="theme-color" content="#10302b">
@@ -135,11 +135,12 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   <section class="hero">
     <div>
       <p class="mark"><img src="/logo.svg" alt="" width="32" height="32">tokendragon.org</p>
-      <h1>Token Dragon<span class="ticker">TDRN on Ethereum</span></h1>
-      <p class="lede">TDRN will be in-game currency of Dragon Worlds, fantasy MMORPG now in development. Fixed supply of 1,000,000 tokens, all minted once at deployment. The contract has no owner and no mint function, so supply can never grow.</p>
+      <h1>Token Dragon<span class="ticker">TDRN on Ethereum and Solana</span></h1>
+      <p class="lede">TDRN will be in-game currency of Dragon Worlds, fantasy MMORPG now in development. It is issued on Ethereum and on Solana as two separate tokens. Each has fixed supply of 1,000,000, minted once at creation, and neither can mint more.</p>
       <div class="actions">
-        <button class="btn btn-primary" id="add">Add TDRN to wallet</button>
+        <button class="btn btn-primary" id="add">Add Ethereum TDRN to wallet</button>
         <a class="btn btn-quiet" href="https://etherscan.io/token/0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b" rel="noopener">View on Etherscan</a>
+        <a class="btn btn-quiet" href="https://solscan.io/token/V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky" rel="noopener">View on Solscan</a>
       </div>
       <p class="status" id="status" role="status" aria-live="polite"></p>
     </div>
@@ -154,12 +155,12 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   </section>
 
   <section class="facts" aria-labelledby="facts-title">
-    <h2 id="facts-title">Contract facts</h2>
+    <h2 id="facts-title">Ethereum token</h2>
     <dl>
       <dt>Network</dt>
       <dd>Ethereum mainnet</dd>
       <dt>Contract address</dt>
-      <dd class="addr"><code id="address">0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b</code><button class="copy" id="copy">Copy</button></dd>
+      <dd class="addr"><code>0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b</code><button class="copy" data-copy="0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b">Copy</button></dd>
       <dt>Standard</dt>
       <dd>ERC-20</dd>
       <dt>Total supply</dt>
@@ -179,6 +180,32 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
     </dl>
   </section>
 
+  <section class="facts" aria-labelledby="sol-title">
+    <h2 id="sol-title">Solana token</h2>
+    <dl>
+      <dt>Network</dt>
+      <dd>Solana mainnet</dd>
+      <dt>Mint address</dt>
+      <dd class="addr"><code>V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky</code><button class="copy" data-copy="V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky">Copy</button></dd>
+      <dt>Standard</dt>
+      <dd>SPL Token with Metaplex metadata</dd>
+      <dt>Total supply</dt>
+      <dd>1,000,000 TDRN, minted once at creation</dd>
+      <dt>Decimals</dt>
+      <dd>9</dd>
+      <dt>Mint authority</dt>
+      <dd>Revoked</dd>
+      <dt>Freeze authority</dt>
+      <dd>Revoked</dd>
+      <dt>Explorer</dt>
+      <dd><a href="https://solscan.io/token/V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky" rel="noopener">Solscan</a>, <a href="https://explorer.solana.com/address/V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky" rel="noopener">Solana Explorer</a></dd>
+      <dt>Official pool</dt>
+      <dd>Orca Whirlpool, TDRN / USDC, 1% fee: <a href="https://www.orca.so/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">Orca</a>, <a href="https://www.geckoterminal.com/solana/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">GeckoTerminal</a>, <a href="https://dexscreener.com/solana/a6dzvpt5qqzkuw9perlwamktw3vj1h532f8ksx8mwxhz" rel="noopener">DEX Screener</a><br><code>A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ</code></dd>
+      <dt>Created</dt>
+      <dd>16 November 2026, <a href="https://solscan.io/tx/5ARQuN4fBPDpKRdKoUWzDdAMxsWozRPgo1DcyfgbraFjvh36eMohUhifGpWSJAS1oaQYD5Vv9h22aZYcPQwmyQDK" rel="noopener">transaction</a></dd>
+    </dl>
+  </section>
+
   <section class="contact" aria-labelledby="contact-title">
     <h2 id="contact-title">Contact</h2>
     <p>Questions about TDRN: <a href="mailto:info@tokendragon.org">info@tokendragon.org</a></p>
@@ -192,13 +219,14 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   var ADDRESS = "0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b";
   var status = document.getElementById("status");
 
-  document.getElementById("copy").addEventListener("click", function () {
-    var btn = this;
-    navigator.clipboard.writeText(ADDRESS).then(function () {
-      btn.textContent = "Copied";
-      setTimeout(function () { btn.textContent = "Copy"; }, 1600);
-    }, function () {
-      status.textContent = "Copy failed. Select the address and copy it manually.";
+  document.querySelectorAll(".copy[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      navigator.clipboard.writeText(btn.getAttribute("data-copy")).then(function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1600);
+      }, function () {
+        status.textContent = "Copy failed. Select the address and copy it manually.";
+      });
     });
   });
 
