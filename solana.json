@@ -1,7 +1,7 @@
 {
   "name": "Token Dragon",
   "symbol": "TDRN",
-  "description": "Token Dragon (TDRN) is SPL token on Solana with fixed supply of 1,000,000, planned as in-game currency of Dragon Worlds, fantasy MMORPG in development, for character upgrades and items. The full supply was minted once at creation. Mint and freeze authorities are revoked.",
+  "description": "Token Dragon (TDRN) is SPL token on Solana with fixed supply of 1,000,000, planned as in-game currency of Dragon Worlds, fantasy MMORPG in development, for character upgrades and items. The full supply was minted once at creation. Mint and freeze authorities are revoked. Official website: tokendragon.org",
   "image": "https://tokendragon.org/logo-256.png",
   "external_url": "https://tokendragon.org",
   "website": "https://tokendragon.org",
