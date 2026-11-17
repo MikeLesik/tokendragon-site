@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Token Dragon (TDRN)</title>
-<meta name="description" content="Token Dragon (TDRN) is ERC-20 token on Ethereum and SPL token on Solana, each with fixed supply of 1,000,000, planned as in-game currency of Dragon Worlds, fantasy MMORPG in development.">
+<title>Token Dragon (TDRN, DWRLD)</title>
+<meta name="description" content="Token Dragon is planned in-game currency of Dragon Worlds, fantasy MMORPG in development. It is issued as TDRN on Ethereum and DWRLD on Solana, each with fixed supply of 1,000,000.">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/logo-256.png">
-<meta property="og:title" content="Token Dragon (TDRN)">
-<meta property="og:description" content="ERC-20 token on Ethereum and SPL token on Solana, each with fixed supply of 1,000,000.">
+<meta property="og:title" content="Token Dragon (TDRN, DWRLD)">
+<meta property="og:description" content="TDRN on Ethereum and DWRLD on Solana, each with fixed supply of 1,000,000.">
 <meta property="og:image" content="https://tokendragon.org/logo-256.png">
 <meta property="og:url" content="https://tokendragon.org/">
 <meta name="theme-color" content="#10302b">
@@ -67,6 +67,7 @@ h1 {
   letter-spacing: 0.02em;
   color: var(--amber);
 }
+.nw { white-space: nowrap; }
 .lede { max-width: 34em; margin: 28px 0 36px; color: var(--bone); font-size: 20px; }
 .actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .btn {
@@ -150,8 +151,8 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   <section class="hero">
     <div>
       <p class="mark"><img src="/logo.svg" alt="" width="32" height="32">tokendragon.org</p>
-      <h1>Token Dragon<span class="ticker">TDRN on Ethereum and Solana</span></h1>
-      <p class="lede">TDRN will be in-game currency of Dragon Worlds, fantasy MMORPG now in development. It is issued on Ethereum and on Solana as two separate tokens. Each has fixed supply of 1,000,000, minted once at creation, and neither can mint more.</p>
+      <h1>Token Dragon<span class="ticker"><span class="nw">TDRN on Ethereum,</span> <span class="nw">DWRLD on Solana</span></span></h1>
+      <p class="lede">Token Dragon will be in-game currency of Dragon Worlds, fantasy MMORPG now in development. It is issued as two separate tokens: TDRN on Ethereum and DWRLD on Solana. Each has fixed supply of 1,000,000, minted once at creation, and neither can mint more.</p>
       <div class="actions">
         <button class="btn btn-primary" id="add">Add Ethereum TDRN to wallet</button>
         <a class="btn btn-quiet" href="https://etherscan.io/token/0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b" rel="noopener">View on Etherscan</a>
@@ -165,19 +166,19 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   </section>
 
   <section class="use" aria-labelledby="use-title">
-    <h2 id="use-title">What TDRN is for</h2>
-    <p>Dragon Worlds is fantasy MMORPG in development: one shared online world where players build up their characters, gather gear and play together. TDRN is planned as its in-game currency.</p>
-    <p>Players will spend TDRN on character upgrades and in-game items. They will get it as rewards for play, through community programs such as playtests, and from official pools on Uniswap and Orca.</p>
-    <p>TDRN exists on Ethereum and on Solana as two separate tokens. Each has fixed supply of 1,000,000, minted once at creation. Neither token can mint more, and neither has keys that could freeze holders or take their tokens.</p>
+    <h2 id="use-title">What Token Dragon is for</h2>
+    <p>Dragon Worlds is fantasy MMORPG in development: one shared online world where players build up their characters, gather gear and play together. Token Dragon is planned as its in-game currency.</p>
+    <p>Players will spend it on character upgrades and in-game items. They will get it as rewards for play, through community programs such as playtests, and from official pools on Uniswap and Orca.</p>
+    <p>Token Dragon exists as two separate tokens: TDRN on Ethereum and DWRLD on Solana. Each has fixed supply of 1,000,000, minted once at creation. Neither token can mint more, and neither has keys that could freeze holders or take their tokens.</p>
     <p><a href="/litepaper.html">Read litepaper</a></p>
   </section>
 
   <section class="tokenomics" aria-labelledby="tok-title">
     <h2 id="tok-title">Tokenomics</h2>
-    <p>Same plan applies on both networks: 1,000,000 TDRN on Ethereum and 1,000,000 TDRN on Solana, split the same way.</p>
+    <p>Same plan applies on both networks: 1,000,000 TDRN on Ethereum and 1,000,000 DWRLD on Solana, split the same way.</p>
     <table>
       <thead>
-        <tr><th scope="col">Allocation</th><th scope="col" class="num">Share</th><th scope="col" class="num">TDRN per network</th></tr>
+        <tr><th scope="col">Allocation</th><th scope="col" class="num">Share</th><th scope="col" class="num">Tokens per network</th></tr>
       </thead>
       <tbody>
         <tr><td>Player rewards<small>Paid out in game after launch as rewards for play</small></td><td class="num">40%</td><td class="num">400,000</td></tr>
@@ -217,6 +218,8 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <dd>Ethereum mainnet</dd>
       <dt>Contract address</dt>
       <dd class="addr"><code>0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b</code><button class="copy" data-copy="0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b">Copy</button></dd>
+      <dt>Ticker</dt>
+      <dd>TDRN</dd>
       <dt>Standard</dt>
       <dd>ERC-20</dd>
       <dt>Total supply</dt>
@@ -243,10 +246,12 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <dd>Solana mainnet</dd>
       <dt>Mint address</dt>
       <dd class="addr"><code>V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky</code><button class="copy" data-copy="V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky">Copy</button></dd>
+      <dt>Ticker</dt>
+      <dd>DWRLD, changed from TDRN on 17 November 2026 (<a href="https://solscan.io/tx/411fcYcpuTShWeVSJ8Tnj7qK9JxNcFQca8F4tqHrpiQXUoH5ngDzN3NHFEZ5NKuakenwodCbq1vr2WrMiveBRua6" rel="noopener">transaction</a>)</dd>
       <dt>Standard</dt>
       <dd>SPL Token with Metaplex metadata</dd>
       <dt>Total supply</dt>
-      <dd>1,000,000 TDRN, minted once at creation</dd>
+      <dd>1,000,000 DWRLD, minted once at creation</dd>
       <dt>Decimals</dt>
       <dd>9</dd>
       <dt>Mint authority</dt>
@@ -256,7 +261,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <dt>Explorer</dt>
       <dd><a href="https://solscan.io/token/V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky" rel="noopener">Solscan</a>, <a href="https://explorer.solana.com/address/V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky" rel="noopener">Solana Explorer</a></dd>
       <dt>Official pool</dt>
-      <dd>Orca Whirlpool, TDRN / USDC, 1% fee: <a href="https://www.orca.so/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">Orca</a>, <a href="https://www.geckoterminal.com/solana/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">GeckoTerminal</a>, <a href="https://dexscreener.com/solana/a6dzvpt5qqzkuw9perlwamktw3vj1h532f8ksx8mwxhz" rel="noopener">DEX Screener</a><br><code>A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ</code></dd>
+      <dd>Orca Whirlpool, DWRLD / USDC, 1% fee: <a href="https://www.orca.so/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">Orca</a>, <a href="https://www.geckoterminal.com/solana/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">GeckoTerminal</a>, <a href="https://dexscreener.com/solana/a6dzvpt5qqzkuw9perlwamktw3vj1h532f8ksx8mwxhz" rel="noopener">DEX Screener</a><br><code>A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ</code></dd>
       <dt>Created</dt>
       <dd>16 November 2026, <a href="https://solscan.io/tx/5ARQuN4fBPDpKRdKoUWzDdAMxsWozRPgo1DcyfgbraFjvh36eMohUhifGpWSJAS1oaQYD5Vv9h22aZYcPQwmyQDK" rel="noopener">transaction</a></dd>
     </dl>
@@ -264,7 +269,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
 
   <section class="contact" aria-labelledby="contact-title">
     <h2 id="contact-title">Contact</h2>
-    <p>Questions about TDRN: <a href="mailto:info@tokendragon.org">info@tokendragon.org</a></p>
+    <p>Questions about Token Dragon: <a href="mailto:info@tokendragon.org">info@tokendragon.org</a></p>
   </section>
 </main>
 <footer>

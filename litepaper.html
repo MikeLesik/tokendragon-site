@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Token Dragon litepaper</title>
-<meta name="description" content="Token Dragon (TDRN) litepaper: in-game currency of Dragon Worlds, token design on Ethereum and Solana, allocation, liquidity and roadmap.">
+<meta name="description" content="Token Dragon litepaper: in-game currency of Dragon Worlds, TDRN on Ethereum and DWRLD on Solana, allocation, liquidity and roadmap.">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="icon" href="/logo-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/logo-256.png">
 <meta property="og:title" content="Token Dragon litepaper">
-<meta property="og:description" content="How TDRN will be used in Dragon Worlds, how supply is allocated and what has been done so far.">
+<meta property="og:description" content="How Token Dragon will be used in Dragon Worlds, how supply is allocated and what has been done so far.">
 <meta property="og:image" content="https://tokendragon.org/logo-256.png">
 <meta property="og:url" content="https://tokendragon.org/litepaper.html">
 <meta name="theme-color" content="#10302b">
@@ -102,8 +102,8 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
 
   <section aria-labelledby="summary">
     <h2 id="summary">Summary</h2>
-    <p>Token Dragon (TDRN) is planned in-game currency of Dragon Worlds, fantasy MMORPG in development. TDRN is issued on Ethereum and on Solana as two separate tokens, each with fixed supply of 1,000,000.</p>
-    <p>This paper describes how TDRN will be used in the game, how its supply is allocated and what has been done so far.</p>
+    <p>Token Dragon is planned in-game currency of Dragon Worlds, fantasy MMORPG in development. It is issued as two separate tokens, TDRN on Ethereum and DWRLD on Solana, each with fixed supply of 1,000,000.</p>
+    <p>This paper describes how Token Dragon will be used in the game, how its supply is allocated and what has been done so far.</p>
   </section>
 
   <section aria-labelledby="game">
@@ -113,13 +113,13 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
   </section>
 
   <section aria-labelledby="use">
-    <h2 id="use">How TDRN is used</h2>
-    <p>Inside the game TDRN is currency for things that move player forward:</p>
+    <h2 id="use">How Token Dragon is used</h2>
+    <p>Inside the game Token Dragon is currency for things that move player forward:</p>
     <ul>
       <li>character upgrades;</li>
       <li>in-game items.</li>
     </ul>
-    <p>Players will get TDRN in three ways:</p>
+    <p>Players will get it in three ways:</p>
     <ul>
       <li>as rewards for play, paid from player rewards allocation;</li>
       <li>through community programs such as playtests;</li>
@@ -129,7 +129,8 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
 
   <section aria-labelledby="networks">
     <h2 id="networks">Two networks</h2>
-    <p>TDRN exists on Ethereum as ERC-20 token and on Solana as SPL token. These are two independent tokens with separate supply of 1,000,000 each. There is no bridge between them, and both follow the same allocation plan.</p>
+    <p>Token Dragon exists on Ethereum as ERC-20 token TDRN and on Solana as SPL token DWRLD. These are two independent tokens with separate supply of 1,000,000 each. There is no bridge between them, and both follow the same allocation plan.</p>
+    <p>Solana token was issued as TDRN on 16 November 2026 and its ticker was changed to DWRLD on 17 November 2026.</p>
   </section>
 
   <section aria-labelledby="design">
@@ -138,6 +139,8 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
     <dl>
       <dt>Contract</dt>
       <dd><code>0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b</code></dd>
+      <dt>Ticker</dt>
+      <dd>TDRN</dd>
       <dt>Standard</dt>
       <dd>ERC-20, 18 decimals</dd>
       <dt>Supply</dt>
@@ -153,10 +156,12 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
     <dl>
       <dt>Mint</dt>
       <dd><code>V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky</code></dd>
+      <dt>Ticker</dt>
+      <dd>DWRLD</dd>
       <dt>Standard</dt>
       <dd>SPL Token with Metaplex metadata, 9 decimals</dd>
       <dt>Supply</dt>
-      <dd>1,000,000 TDRN, minted once on 16 November 2026</dd>
+      <dd>1,000,000 DWRLD, minted once on 16 November 2026</dd>
       <dt>Mint authority</dt>
       <dd>Revoked</dd>
       <dt>Freeze authority</dt>
@@ -171,7 +176,7 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
     <p>Same split applies on each network.</p>
     <table>
       <thead>
-        <tr><th scope="col">Allocation</th><th scope="col" class="num">Share</th><th scope="col" class="num">TDRN per network</th></tr>
+        <tr><th scope="col">Allocation</th><th scope="col" class="num">Share</th><th scope="col" class="num">Tokens per network</th></tr>
       </thead>
       <tbody>
         <tr><td>Player rewards<small>Paid out in game after launch as rewards for play</small></td><td class="num">40%</td><td class="num">400,000</td></tr>
@@ -186,10 +191,10 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
 
   <section aria-labelledby="liquidity">
     <h2 id="liquidity">Liquidity</h2>
-    <p>Official pools pair TDRN with USDC at 1% fee:</p>
+    <p>Official pools pair each token with USDC at 1% fee:</p>
     <ul>
       <li>Ethereum: <a href="https://app.uniswap.org/explore/pools/ethereum/0x6819072240F29c586019db8F70411Ba8c03146C8" rel="noopener">Uniswap v3 pool</a>, opened on 5 November 2026 with 1,000 TDRN;</li>
-      <li>Solana: <a href="https://www.orca.so/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">Orca Whirlpool</a>, opened on 16 November 2026 with 1,000 TDRN.</li>
+      <li>Solana: <a href="https://www.orca.so/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">Orca Whirlpool</a>, opened on 16 November 2026 with 1,000 DWRLD.</li>
     </ul>
     <p>More liquidity will come from liquidity allocation. It will be locked, and lock transactions will be listed on tokendragon.org.</p>
   </section>
@@ -198,17 +203,18 @@ footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40
     <h2 id="roadmap">Roadmap</h2>
     <h3>Done</h3>
     <ul class="done">
-      <li>November 2026: TDRN issued on Ethereum and Solana</li>
+      <li>November 2026: tokens issued on Ethereum and Solana</li>
       <li>November 2026: official pools opened on Uniswap and Orca</li>
       <li>November 2026: tokendragon.org launched</li>
+      <li>November 2026: Solana ticker changed to DWRLD</li>
     </ul>
     <h3>Next</h3>
     <ul>
       <li>Official community channels</li>
       <li>Separate allocation wallets and liquidity lock</li>
-      <li>Closed playtest with TDRN rewards from community allocation</li>
+      <li>Closed playtest with Token Dragon rewards from community allocation</li>
       <li>Listing applications to CoinGecko and CoinMarketCap</li>
-      <li>Game launch with TDRN as in-game currency</li>
+      <li>Game launch with Token Dragon as in-game currency</li>
     </ul>
   </section>
 
