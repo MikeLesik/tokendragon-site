@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Dragon litepaper</title>
+<meta name="description" content="Token Dragon (TDRN) litepaper: in-game currency of Dragon Worlds, token design on Ethereum and Solana, allocation, liquidity and roadmap.">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="icon" href="/logo-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/logo-256.png">
+<meta property="og:title" content="Token Dragon litepaper">
+<meta property="og:description" content="How TDRN will be used in Dragon Worlds, how supply is allocated and what has been done so far.">
+<meta property="og:image" content="https://tokendragon.org/logo-256.png">
+<meta property="og:url" content="https://tokendragon.org/litepaper.html">
+<meta name="theme-color" content="#10302b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --scale: #10302b;
+  --scale-deep: #0b231f;
+  --line: #2c5149;
+  --bone: #ece4d0;
+  --bone-dim: #b9b2a0;
+  --amber: #f2a03a;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--scale);
+  color: var(--bone);
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+}
+a { color: var(--amber); text-underline-offset: 3px; }
+a:hover { color: #ffc067; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.mark { display: flex; align-items: center; gap: 12px; margin: 0; padding: 40px 0 0; font-weight: 600; font-size: 17px; }
+.mark a { display: inline-flex; align-items: center; gap: 12px; color: var(--bone-dim); text-decoration: none; }
+.mark a:hover { color: var(--bone); }
+.mark img { width: 32px; height: 32px; }
+header { padding: 56px 0 40px; }
+h1 {
+  margin: 0;
+  font-size: clamp(44px, 7vw, 72px);
+  line-height: 0.98;
+  font-weight: 800;
+  font-variation-settings: "opsz" 96;
+  letter-spacing: -0.03em;
+}
+.version { margin: 16px 0 0; color: var(--amber); font-size: 18px; }
+section { border-top: 1.5px solid var(--line); padding: 40px 0 16px; }
+h2 { margin: 0 0 20px; font-size: 28px; font-weight: 700; letter-spacing: -0.015em; }
+h3 { margin: 28px 0 8px; font-size: 20px; font-weight: 650; }
+p { margin: 0 0 20px; }
+ul { margin: 0 0 20px; padding-left: 22px; }
+li { margin: 0 0 8px; }
+li::marker { color: var(--amber); }
+dl { margin: 0 0 24px; display: grid; grid-template-columns: 200px minmax(0, 1fr); }
+dt, dd { margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); }
+dt { color: var(--bone-dim); }
+dd { font-weight: 500; }
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 15px;
+  word-break: break-all;
+}
+table { width: 100%; border-collapse: collapse; margin: 0 0 24px; }
+th, td { text-align: left; vertical-align: top; padding: 14px 20px 14px 0; border-bottom: 1px solid var(--line); }
+th { color: var(--bone-dim); font-weight: 500; font-size: 16px; }
+td { font-weight: 500; }
+.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+th:last-child, td:last-child { padding-right: 0; }
+th.num { white-space: normal; }
+td small { display: block; margin-top: 4px; color: var(--bone-dim); font-size: 16px; font-weight: 400; }
+.done { color: var(--bone-dim); }
+footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40px; color: var(--bone-dim); font-size: 15px; }
+@media (max-width: 640px) {
+  header { padding: 32px 0 28px; }
+  dl { grid-template-columns: 1fr; }
+  dt { border-bottom: 0; padding-bottom: 2px; }
+  dd { padding-top: 0; }
+}
+@media (max-width: 420px) {
+  .wrap { padding: 0 16px; }
+  th, td { padding-right: 12px; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="mark"><a href="/"><img src="/logo.svg" alt="" width="32" height="32">tokendragon.org</a></p>
+  <header>
+    <h1>Token Dragon litepaper</h1>
+    <p class="version">Version 1, November 2026</p>
+  </header>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <p>Token Dragon (TDRN) is planned in-game currency of Dragon Worlds, fantasy MMORPG in development. TDRN is issued on Ethereum and on Solana as two separate tokens, each with fixed supply of 1,000,000.</p>
+    <p>This paper describes how TDRN will be used in the game, how its supply is allocated and what has been done so far.</p>
+  </section>
+
+  <section aria-labelledby="game">
+    <h2 id="game">Dragon Worlds</h2>
+    <p>Dragon Worlds is online role-playing game set in fantasy world. Players create characters, develop them, gather gear and play together with others in one shared world.</p>
+    <p>Game is in development and has no public build yet.</p>
+  </section>
+
+  <section aria-labelledby="use">
+    <h2 id="use">How TDRN is used</h2>
+    <p>Inside the game TDRN is currency for things that move player forward:</p>
+    <ul>
+      <li>character upgrades;</li>
+      <li>in-game items.</li>
+    </ul>
+    <p>Players will get TDRN in three ways:</p>
+    <ul>
+      <li>as rewards for play, paid from player rewards allocation;</li>
+      <li>through community programs such as playtests;</li>
+      <li>from official pools on Uniswap and Orca.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="networks">
+    <h2 id="networks">Two networks</h2>
+    <p>TDRN exists on Ethereum as ERC-20 token and on Solana as SPL token. These are two independent tokens with separate supply of 1,000,000 each. There is no bridge between them, and both follow the same allocation plan.</p>
+  </section>
+
+  <section aria-labelledby="design">
+    <h2 id="design">Token design</h2>
+    <h3>Ethereum</h3>
+    <dl>
+      <dt>Contract</dt>
+      <dd><code>0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b</code></dd>
+      <dt>Standard</dt>
+      <dd>ERC-20, 18 decimals</dd>
+      <dt>Supply</dt>
+      <dd>1,000,000 TDRN, minted once on 5 November 2026</dd>
+      <dt>Mint function</dt>
+      <dd>None</dd>
+      <dt>Owner and admin roles</dt>
+      <dd>None</dd>
+      <dt>Source code</dt>
+      <dd>Verified on <a href="https://etherscan.io/address/0xCCA1e4495c6cBAe510468e7d47f544A94a85a72b#code" rel="noopener">Etherscan</a></dd>
+    </dl>
+    <h3>Solana</h3>
+    <dl>
+      <dt>Mint</dt>
+      <dd><code>V3SsoWAKr9Hk2fwsMhtM4HhwQfFTi6yyaRkhh8P4nky</code></dd>
+      <dt>Standard</dt>
+      <dd>SPL Token with Metaplex metadata, 9 decimals</dd>
+      <dt>Supply</dt>
+      <dd>1,000,000 TDRN, minted once on 16 November 2026</dd>
+      <dt>Mint authority</dt>
+      <dd>Revoked</dd>
+      <dt>Freeze authority</dt>
+      <dd>Revoked</dd>
+      <dt>Metadata update authority</dt>
+      <dd>Held by project to keep name, logo and links up to date, at <code>3pQHhQUG9VFR3SnxwgwYG2h8UwFcUyUeFtUCrWS23eL2</code>. It will be revoked once token details are final.</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="allocation">
+    <h2 id="allocation">Allocation</h2>
+    <p>Same split applies on each network.</p>
+    <table>
+      <thead>
+        <tr><th scope="col">Allocation</th><th scope="col" class="num">Share</th><th scope="col" class="num">TDRN per network</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Player rewards<small>Paid out in game after launch as rewards for play</small></td><td class="num">40%</td><td class="num">400,000</td></tr>
+        <tr><td>Development and treasury<small>Game development, partnerships and listings</small></td><td class="num">20%</td><td class="num">200,000</td></tr>
+        <tr><td>Liquidity<small>Official pools on Uniswap and Orca, added in stages and locked</small></td><td class="num">15%</td><td class="num">150,000</td></tr>
+        <tr><td>Team<small>Locked for 12 months, then released monthly over 24 months</small></td><td class="num">15%</td><td class="num">150,000</td></tr>
+        <tr><td>Community and playtests<small>Playtesters, early players and contributors</small></td><td class="num">10%</td><td class="num">100,000</td></tr>
+      </tbody>
+    </table>
+    <p>All allocations sit in project wallet for now. Each will move to its own address, and liquidity and team tokens will be locked. Current distribution, project wallet addresses and lock transactions are published on <a href="/#tok-title">tokendragon.org</a>.</p>
+  </section>
+
+  <section aria-labelledby="liquidity">
+    <h2 id="liquidity">Liquidity</h2>
+    <p>Official pools pair TDRN with USDC at 1% fee:</p>
+    <ul>
+      <li>Ethereum: <a href="https://app.uniswap.org/explore/pools/ethereum/0x6819072240F29c586019db8F70411Ba8c03146C8" rel="noopener">Uniswap v3 pool</a>, opened on 5 November 2026 with 1,000 TDRN;</li>
+      <li>Solana: <a href="https://www.orca.so/pools/A6dzVpT5QQzKUW9PERLWaMkTW3VJ1H532f8KSX8mwxHZ" rel="noopener">Orca Whirlpool</a>, opened on 16 November 2026 with 1,000 TDRN.</li>
+    </ul>
+    <p>More liquidity will come from liquidity allocation. It will be locked, and lock transactions will be listed on tokendragon.org.</p>
+  </section>
+
+  <section aria-labelledby="roadmap">
+    <h2 id="roadmap">Roadmap</h2>
+    <h3>Done</h3>
+    <ul class="done">
+      <li>November 2026: TDRN issued on Ethereum and Solana</li>
+      <li>November 2026: official pools opened on Uniswap and Orca</li>
+      <li>November 2026: tokendragon.org launched</li>
+    </ul>
+    <h3>Next</h3>
+    <ul>
+      <li>Official community channels</li>
+      <li>Separate allocation wallets and liquidity lock</li>
+      <li>Closed playtest with TDRN rewards from community allocation</li>
+      <li>Listing applications to CoinGecko and CoinMarketCap</li>
+      <li>Game launch with TDRN as in-game currency</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <p><a href="mailto:info@tokendragon.org">info@tokendragon.org</a></p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">Token Dragon, 2026. <a href="/">tokendragon.org</a></div>
+</footer>
+</body>
+</html>

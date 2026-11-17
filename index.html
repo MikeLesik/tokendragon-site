@@ -91,6 +91,20 @@ h1 {
 
 .use { border-top: 1.5px solid var(--line); padding: 56px 0 56px; }
 .use p { margin: 0; max-width: 34em; font-size: 20px; }
+.use p + p { margin-top: 18px; }
+.tokenomics { border-top: 1.5px solid var(--line); padding: 56px 0 24px; }
+.tokenomics p { margin: 0 0 24px; max-width: 34em; }
+h3 { margin: 40px 0 8px; font-size: 22px; font-weight: 650; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 24px; }
+th, td { text-align: left; vertical-align: top; padding: 16px 20px 16px 0; border-bottom: 1px solid var(--line); }
+th { color: var(--bone-dim); font-weight: 500; font-size: 16px; }
+td { font-weight: 500; }
+.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+th:last-child, td:last-child { padding-right: 0; }
+th.num { white-space: normal; }
+td small { display: block; margin-top: 4px; color: var(--bone-dim); font-size: 16px; font-weight: 400; }
+tr.total td { color: var(--amber); font-weight: 650; }
+.note { color: var(--bone-dim); font-size: 16px; }
 .facts { border-top: 1.5px solid var(--line); padding: 56px 0 24px; }
 h2 { margin: 0 0 28px; font-size: 32px; font-weight: 700; letter-spacing: -0.015em; }
 dl { margin: 0; display: grid; grid-template-columns: 240px minmax(0, 1fr); }
@@ -126,6 +140,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
 }
 @media (max-width: 420px) {
   .wrap { padding: 0 16px; }
+  th, td { padding-right: 12px; }
   .btn { width: 100%; text-align: center; }
 }
 </style>
@@ -151,7 +166,48 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
 
   <section class="use" aria-labelledby="use-title">
     <h2 id="use-title">What TDRN is for</h2>
-    <p>Dragon Worlds is fantasy MMORPG in development. TDRN is planned as its in-game currency: players will spend it on character upgrades and in-game items.</p>
+    <p>Dragon Worlds is fantasy MMORPG in development: one shared online world where players build up their characters, gather gear and play together. TDRN is planned as its in-game currency.</p>
+    <p>Players will spend TDRN on character upgrades and in-game items. They will get it as rewards for play, through community programs such as playtests, and from official pools on Uniswap and Orca.</p>
+    <p>TDRN exists on Ethereum and on Solana as two separate tokens. Each has fixed supply of 1,000,000, minted once at creation. Neither token can mint more, and neither has keys that could freeze holders or take their tokens.</p>
+    <p><a href="/litepaper.html">Read litepaper</a></p>
+  </section>
+
+  <section class="tokenomics" aria-labelledby="tok-title">
+    <h2 id="tok-title">Tokenomics</h2>
+    <p>Same plan applies on both networks: 1,000,000 TDRN on Ethereum and 1,000,000 TDRN on Solana, split the same way.</p>
+    <table>
+      <thead>
+        <tr><th scope="col">Allocation</th><th scope="col" class="num">Share</th><th scope="col" class="num">TDRN per network</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Player rewards<small>Paid out in game after launch as rewards for play</small></td><td class="num">40%</td><td class="num">400,000</td></tr>
+        <tr><td>Development and treasury<small>Game development, partnerships and listings</small></td><td class="num">20%</td><td class="num">200,000</td></tr>
+        <tr><td>Liquidity<small>Official pools on Uniswap and Orca, added in stages and locked</small></td><td class="num">15%</td><td class="num">150,000</td></tr>
+        <tr><td>Team<small>Locked for 12 months, then released monthly over 24 months</small></td><td class="num">15%</td><td class="num">150,000</td></tr>
+        <tr><td>Community and playtests<small>Playtesters, early players and contributors</small></td><td class="num">10%</td><td class="num">100,000</td></tr>
+      </tbody>
+    </table>
+    <p class="note">All allocations sit in project wallet for now. Each will move to its own address, and liquidity and team tokens will be locked. Addresses and lock transactions will be published here as each step is done.</p>
+
+    <h3>Current distribution</h3>
+    <p class="note">As of 17 November 2026. Circulating supply counts tokens outside project wallet.</p>
+    <table>
+      <thead>
+        <tr><th scope="col">Holder</th><th scope="col" class="num">Ethereum</th><th scope="col" class="num">Solana</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Project wallet</td><td class="num">999,000</td><td class="num">997,268.85</td></tr>
+        <tr><td>Official pool</td><td class="num">989.31</td><td class="num">999.15</td></tr>
+        <tr><td>Other wallets</td><td class="num">10.69</td><td class="num">1,732</td></tr>
+        <tr class="total"><td>Circulating supply</td><td class="num">1,000</td><td class="num">2,731.15</td></tr>
+      </tbody>
+    </table>
+    <dl>
+      <dt>Project wallet on Ethereum</dt>
+      <dd class="addr"><code>0x22ca0Bd9449E7653ab1C12b9e4408bc265918e08</code><button class="copy" data-copy="0x22ca0Bd9449E7653ab1C12b9e4408bc265918e08">Copy</button></dd>
+      <dt>Project wallet on Solana</dt>
+      <dd class="addr"><code>G84Q3N1pvbiLLrysZYuE5T5VwkDSKSdNgJAUeEfgA5KS</code><button class="copy" data-copy="G84Q3N1pvbiLLrysZYuE5T5VwkDSKSdNgJAUeEfgA5KS">Copy</button></dd>
+    </dl>
   </section>
 
   <section class="facts" aria-labelledby="facts-title">
@@ -212,7 +268,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
   </section>
 </main>
 <footer>
-  <div class="wrap">Token Dragon, 2026</div>
+  <div class="wrap">Token Dragon, 2026. <a href="/litepaper.html">Litepaper</a></div>
 </footer>
 <script>
 (function () {
