@@ -188,16 +188,20 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
         <tr><td>Community and playtests<small>Playtesters, early players and contributors</small></td><td class="num">10%</td><td class="num">100,000</td></tr>
       </tbody>
     </table>
-    <p class="note">All allocations sit in project wallet for now. Each will move to its own address, and liquidity and team tokens will be locked. Addresses and lock transactions will be published here as each step is done.</p>
+    <p class="note">On Solana each allocation now has its own address, listed below. Team tokens are locked in vesting contract, and liquidity tokens will be added to official pool in stages and locked. On Ethereum all allocations still sit in project wallet and will move the same way.</p>
 
     <h3>Current distribution</h3>
-    <p class="note">As of 20 November 2026. Circulating supply counts tokens outside project wallet.</p>
+    <p class="note">As of 21 November 2026. Circulating supply counts tokens outside project wallets and vesting contract.</p>
     <table>
       <thead>
         <tr><th scope="col">Holder</th><th scope="col" class="num">Ethereum</th><th scope="col" class="num">Solana</th></tr>
       </thead>
       <tbody>
-        <tr><td>Project wallet</td><td class="num">999,000</td><td class="num">995,191.85</td></tr>
+        <tr><td>Project wallet</td><td class="num">999,000</td><td class="num">200,000.85</td></tr>
+        <tr><td>Player rewards wallet</td><td class="num"></td><td class="num">400,000</td></tr>
+        <tr><td>Liquidity wallet</td><td class="num"></td><td class="num">149,000</td></tr>
+        <tr><td>Community wallet</td><td class="num"></td><td class="num">96,191</td></tr>
+        <tr><td>Team vesting contract</td><td class="num"></td><td class="num">150,000</td></tr>
         <tr><td>Official pool</td><td class="num">989.31</td><td class="num">999.15</td></tr>
         <tr><td>Other wallets</td><td class="num">10.69</td><td class="num">3,809</td></tr>
         <tr class="total"><td>Circulating supply</td><td class="num">1,000</td><td class="num">4,808.15</td></tr>
@@ -208,6 +212,14 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <dd class="addr"><code>0x22ca0Bd9449E7653ab1C12b9e4408bc265918e08</code><button class="copy" data-copy="0x22ca0Bd9449E7653ab1C12b9e4408bc265918e08">Copy</button></dd>
       <dt>Project wallet on Solana</dt>
       <dd class="addr"><code>G84Q3N1pvbiLLrysZYuE5T5VwkDSKSdNgJAUeEfgA5KS</code><button class="copy" data-copy="G84Q3N1pvbiLLrysZYuE5T5VwkDSKSdNgJAUeEfgA5KS">Copy</button></dd>
+      <dt>Player rewards on Solana</dt>
+      <dd class="addr"><code>61RYagufLKL5oqSdTnus5b1Lays5rFpUxg9eji1UfHVS</code><button class="copy" data-copy="61RYagufLKL5oqSdTnus5b1Lays5rFpUxg9eji1UfHVS">Copy</button></dd>
+      <dt>Liquidity on Solana</dt>
+      <dd class="addr"><code>36vKEK33WhJ5oD2Fqbqa4jE5TvorhjNVky9JS8jPUjFN</code><button class="copy" data-copy="36vKEK33WhJ5oD2Fqbqa4jE5TvorhjNVky9JS8jPUjFN">Copy</button></dd>
+      <dt>Community on Solana</dt>
+      <dd class="addr"><code>FuJ23XbixhwVPnvad7bsTBUKik3KegWEnotdDZnCmRGr</code><button class="copy" data-copy="FuJ23XbixhwVPnvad7bsTBUKik3KegWEnotdDZnCmRGr">Copy</button></dd>
+      <dt>Team vesting on Solana</dt>
+      <dd class="addr"><code>4V2kx91GKavbvpBQzU38SJTgG8XTV2s7cXG61gXTqrKv</code><button class="copy" data-copy="4V2kx91GKavbvpBQzU38SJTgG8XTV2s7cXG61gXTqrKv">Copy</button><a href="https://lock.jup.ag/escrow/4V2kx91GKavbvpBQzU38SJTgG8XTV2s7cXG61gXTqrKv" rel="noopener">Jupiter Lock</a></dd>
     </dl>
   </section>
 
@@ -265,6 +277,13 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--b
       <dt>Created</dt>
       <dd>16 November 2026, <a href="https://solscan.io/tx/5ARQuN4fBPDpKRdKoUWzDdAMxsWozRPgo1DcyfgbraFjvh36eMohUhifGpWSJAS1oaQYD5Vv9h22aZYcPQwmyQDK" rel="noopener">transaction</a></dd>
     </dl>
+  </section>
+
+  <section class="use" aria-labelledby="team-title">
+    <h2 id="team-title">Team</h2>
+    <p>Token Dragon is founded and run by Maksim Vernik. He leads token design, website and litepaper, and product and game design of Dragon Worlds. His background is product management of fintech and Web3 products.</p>
+    <p>At this stage he is the only team member. Project has no outside investors or advisors, and team will grow as game development progresses.</p>
+    <p>On Solana team allocation of 150,000 DWRLD was locked on 21 November 2026 in <a href="https://lock.jup.ag/escrow/4V2kx91GKavbvpBQzU38SJTgG8XTV2s7cXG61gXTqrKv" rel="noopener">Jupiter Lock vesting contract</a>. Nothing unlocks before 25 November 2027, then 6,250 DWRLD unlocks every month for 24 months. Contract cannot be cancelled and its recipient cannot be changed. Payouts go to project wallet on Solana. On Ethereum team allocation will be locked the same way.</p>
   </section>
 
   <section class="contact" aria-labelledby="contact-title">
